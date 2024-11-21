@@ -4,7 +4,7 @@ import "@testing-library/jest-dom";
 
 jest.mock("../src/utils/flagsmith", () => {
   return {
-    getEnvironmentFlags: jest.fn(() => 
+    getEnvironmentFlags: jest.fn(() =>
       Promise.resolve({
         isFeatureEnabled: () => {
           return true;
