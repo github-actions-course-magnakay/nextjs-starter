@@ -49,7 +49,7 @@ jobs:
         id: cache-playwright
         with:
           path: ~/Library/Caches/ms-playwright
-          key: playwright-browsers-${{ env.PLAYRIGHT_VERSION }}
+          key: playwright-browsers-${{ env.PLAYWRIGHT_VERSION }}
       - name: Install Playwright Browsers
         if: steps.cache-playwright.outputs.cache-hit != 'true'
         run: npx playwright install --with-deps
